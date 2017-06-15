@@ -1,6 +1,31 @@
+//- MIXINS
+include ../blocks/container/_container
+include ../blocks/boundary/_boundary
+include ../blocks/title/_title
+include ../blocks/text/_text
+include ../blocks/image/_image
+include ../blocks/wrapper/_wrapper
+
+//- DATA
+
+
+//- HEADER
 include templates/_header
 
-.main
-	h1 Hello Moto
+//- CONTENT
+.content
+	+container("blue", "image-left")
+		+wrapper
+			+image("/images/www.png")
+		+wrapper
+			+title("white", "Обмен с сайтом (интернет-магазином)", "Contabilizare <span>-></span> WEB")
+			+image("/images/www.png", "hidden")
+			+text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est unde quas, repellat soluta, commodi perspiciatis blanditiis autem nesciunt tempore aspernatur, molestiae quisquam? Odit, nihil, inventore.", "white")
+	+boundary("dotted", "gray")
+	+container("gray", "image-right")
+	+boundary("slash", "gray", "white")
+	+container("white", "thumbnail")
+	+boundary("slash-reverse", "white", "gray")
 
+//- FOOTER
 include templates/_footer

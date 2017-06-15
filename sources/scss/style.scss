@@ -7,6 +7,17 @@
 @import 'mixins/_flex';
 @import 'mixins/_media';
 
-@import '../blocks/header/_header';
+@import '../blocks/boundary/_boundary';
+@import '../blocks/callback/_callback';
+@import '../blocks/container/_container';
+@import '../blocks/copyright/_copyright';
 @import '../blocks/footer/_footer';
+@import '../blocks/header/_header';
+@import '../blocks/image/_image';
+@import '../blocks/logo/_logo';
+@import '../blocks/phone/_phone';
+@import '../blocks/social/_social';
+@import '../blocks/text/_text';
+@import '../blocks/title/_title';
+@import '../blocks/wrapper/_wrapper';
 

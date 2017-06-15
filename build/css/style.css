@@ -133,6 +133,122 @@ button {
   border: 0;
   cursor: pointer; }
 
-@media only screen and (max-width: 480px) {
-  .header {
-    margin: 10px; } }
+* {
+  box-sizing: border-box; }
+
+html {
+  font-size: 16px; }
+
+.container {
+  padding: 15px; }
+
+.container_color_white, .container_color_gray {
+  color: #2B2C2E; }
+
+.container_color_blue, .container_color_black {
+  color: #ffffff; }
+
+.container_color_white {
+  background-color: #ffffff; }
+
+.container_color_blue {
+  background-color: #128AC6; }
+
+.container_color_gray {
+  background-color: #F7F7F7; }
+
+.container_color_black {
+  background-color: #2B2C2E; }
+
+.container__inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.container__inner_type_image-left .wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  width: 70%; }
+  .container__inner_type_image-left .wrapper:first-of-type {
+    width: 30%; }
+
+.header {
+  background-color: #ffffff;
+  padding: 15px; }
+
+.header__wrapper {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1024px;
+  margin: 0 auto; }
+
+.image {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 15px 15px 15px 0; }
+
+.image__img {
+  max-width: 100%;
+  height: auto; }
+
+.image__img_hidden {
+  display: none; }
+
+.logo {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap; }
+
+.logo__title-box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex-wrap: wrap; }
+
+.logo__title {
+  color: #2764AA;
+  font-size: 2.27rem;
+  font-weight: 300; }
+
+.phone__title {
+  font-size: 1.5rem; }

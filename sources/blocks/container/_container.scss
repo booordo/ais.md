@@ -1,0 +1,51 @@
+.container {
+	padding: 15px;
+}
+
+.container_color_white, .container_color_gray {
+	color: $black;
+}
+
+.container_color_blue, .container_color_black {
+	color: $white;
+}
+
+.container_color_white {
+	background-color: $white;
+}
+
+.container_color_blue {
+	background-color: $blue;
+}
+
+.container_color_gray {
+	background-color: $gray;
+}
+
+.container_color_black {
+	background-color: $black;
+}
+
+.container__inner {
+	@include flex(row);
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.container__inner_type_image-left {
+	.wrapper {
+		@include flex(column, center)
+		width: 70%;
+		&:first-of-type {
+			width: 30%;
+		}
+	}
+}
+
+.container__inner_type_image-right {
+
+}
+
+.container__inner_type_thumbnail {
+	
+}

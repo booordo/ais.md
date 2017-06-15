@@ -1,8 +1,11 @@
-@mixin flex($direction) {
+@mixin flex($direction: row, $justify-content: flex-start, $align-items: stretch) {
 	display: -webkit-flex;
 	display: -moz-flex;
 	display: -ms-flex;
 	display: -o-flex;
 	display: flex;
 	flex-direction: $direction;
+	justify-content: $justify-content;
+	align-items: $align-items;
+	flex-wrap: wrap;
 }

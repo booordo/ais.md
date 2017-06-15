@@ -1,0 +1,5 @@
+mixin title(color, title, subtitle)
+	.title(class=`title_color_ ${color}`)
+		if subtitle 
+			h3.title__subtitle !{subtitle}
+		h1.title__title !{title}

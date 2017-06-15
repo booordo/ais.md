@@ -1,0 +1,21 @@
+.logo {
+	@include flex();
+}
+
+.logo__icon {
+	
+}
+
+.logo__title-box {
+	@include flex(column);
+}
+
+.logo__title {
+	color: $dark_blue;
+	font-size: 2.27rem;
+	font-weight: 300;
+}
+
+.logo__subtitle {
+	
+}

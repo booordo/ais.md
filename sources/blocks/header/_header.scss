@@ -1,5 +1,18 @@
 .header {
-	@include media (mobile) {
-		margin: 10px;	
-	}
+	background-color: $white;
+	padding: 15px;
+}
+
+.header__wrapper {
+	@include flex( row, space-between, center );
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+.header__logo {
+	
+}
+
+.header__phone {
+
 }
