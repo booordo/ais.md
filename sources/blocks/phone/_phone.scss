@@ -1,11 +1,17 @@
 .phone {
-
+	@include flex(row, flex-start, center);
 }
 
 .phone__icon {
-
+	@include media(mobile) {
+		display: none;
+	}
 }
 
 .phone__title {
+	padding-left: 15px;
 	font-size: 1.5rem;
+	@include media(mobile) {
+		font-size: 1rem;
+	}
 }

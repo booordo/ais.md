@@ -1,5 +1,5 @@
 .container {
-	padding: 15px;
+	padding: 100px 15px 15px;
 }
 
 .container_color_white, .container_color_gray {
@@ -34,10 +34,27 @@
 
 .container__inner_type_image-left {
 	.wrapper {
-		@include flex(column, center)
-		width: 70%;
+		@include flex(column)
+		width: 75%;
 		&:first-of-type {
-			width: 30%;
+			width: 25%;
+		}
+	}
+	@include media(mobile) {
+		.wrapper {
+			width: 100%;
+			&:first-of-type {
+				display: none;
+			}
+		}
+
+		.image {
+			display: none;
+		}
+
+		.image.image_hidden {
+			display: flex;
+			justify-content: center;
 		}
 	}
 }

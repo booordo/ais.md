@@ -1,0 +1,21 @@
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Catorze27Style1";
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+h1 {
+	font-size: 2.444444444444444rem;
+	line-height: 1.2em;
+	@include media(mobile) {
+		font-size: 1.705882352941176rem;
+	}	
+}
+
+h2 {
+	font-size: 1.833333333333333rem;
+	font-weight: 200;
+	@include media(mobile) {
+		font-size: 1.235294117647059rem;
+	}
+}

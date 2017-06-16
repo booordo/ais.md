@@ -1,3 +1,3 @@
 mixin image(url, type)
-	.image
-		img.image__img(src=url class= type ? `image__img_${type}` : "")
+	.image(class= type ? `image_${type}` : "")
+		img.image__img(src=url)

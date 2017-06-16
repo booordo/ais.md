@@ -1,0 +1,10 @@
+.boundary {
+	height: 250px;
+}
+
+.boundary_type_dotted.boundary_color_blue-gray {
+	background-color: $gray;
+	background-image: url("../images/dotted_blue.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+}

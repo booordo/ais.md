@@ -1,21 +1,40 @@
 .logo {
 	@include flex();
+	font-family: "Roboto";
 }
 
-.logo__icon {
-	
+.logo__image-box {
+	@include flex(column, center);
+}
+
+.logo__image {
+	@include media(mobile) {
+		width: 30px;
+		height: 30px;
+	}
 }
 
 .logo__title-box {
-	@include flex(column);
+	@include flex(column, center);
+	padding-left: 15px;
 }
 
 .logo__title {
 	color: $dark_blue;
-	font-size: 2.27rem;
-	font-weight: 300;
+	font-size: 1.777777777777778rem;
+	font-weight: 200;
+	line-height: 1.1em;
+	@include media(mobile) {
+		font-size: 1rem;
+	}
 }
 
 .logo__subtitle {
-	
+	font-weight: 500;
+	font-size: 0.7222222222222222rem;
+	line-height: 1em;
+	margin-left: 1.5px;
+	@include media(mobile) {
+		font-size: 0.4117647058823529rem;
+	}
 }
