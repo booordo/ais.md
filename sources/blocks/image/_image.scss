@@ -1,10 +1,30 @@
 .image {
-	@include flex(row, flex-start, center);
-	padding: 0 30px 0 0;
+	@include flex(row);
+	@include media(mobile) {
+		display: none;
+	}
 }
 
 .image_hidden {
 	display: none;
+	@include media(mobile) {
+		@include flex(row);
+	}
+}
+
+.image_center {
+	justify-content: center;
+	padding-bottom: 40px;
+}
+
+.image_left {
+	justify-content: flex-start;
+	padding-right: 30px;
+}
+
+.image_right {
+	justify-content: flex-end;
+	padding-left: 30px;
 }
 
 .image__img {

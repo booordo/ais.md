@@ -1,0 +1,21 @@
+//- MIXINS
+include ../../blocks/container/_container
+include ../../blocks/boundary/_boundary
+include ../../blocks/title/_title
+include ../../blocks/text/_text
+include ../../blocks/image/_image
+include ../../blocks/wrapper/_wrapper
+include ../../blocks/list/_list
+include ../../blocks/thumbnails/_thumbnails
+
+//- DATA
+include ../data/_blocks
+
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(content="width=device-width, initial-scale=1.0" name="viewport")
+		link(href="css/style.css" rel="stylesheet")
+	body
+		block page

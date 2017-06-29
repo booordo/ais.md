@@ -1,0 +1,17 @@
+.wrapper {
+	@include flex(column)
+}
+
+.wrapper_small {
+	width: 30%;
+	@include media(mobile) {
+		display: none;
+	}
+}
+
+.wrapper_big {
+	width: 70%;
+	@include media(mobile) {
+		width: 100%;
+	}
+}

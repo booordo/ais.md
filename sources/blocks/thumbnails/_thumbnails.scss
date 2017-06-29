@@ -1,0 +1,26 @@
+.thumbnails {
+	
+}
+
+.thumbnails_type_simple {
+	@include flex(row, space-between, stretch)
+}
+
+.thumbnails__item {
+	
+}
+
+.thumbnails__item_type_simple {
+	width: 28%;
+	text-align: center;
+	@include media(mobile) {
+		width: 100%;
+		margin-bottom: 50px;
+	}
+}
+
+.thumbnails__image {
+	height: 130px;
+	width: auto;
+	margin-bottom: 25px;
+}

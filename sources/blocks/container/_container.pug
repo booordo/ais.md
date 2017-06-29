@@ -1,4 +1,4 @@
-mixin container(color, type)
-	.container(class=`container_color_${color}`)
-		.container__inner(class=`container__inner_type_${type}`)
+mixin container(color, size, type)
+	.container(class=`container_color_${color}` + ( size ? ` container_size_${size}` : ""))
+		.container__inner(class= type ? `container__inner_type_${type}` : "")
 			block

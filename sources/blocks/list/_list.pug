@@ -1,0 +1,8 @@
+mixin list(items)
+	ul.list
+		- i = 1;
+		each item in items
+			li.list__item
+				.list__number !{i}
+				.list__text !{item}
+				- i = i + 1;

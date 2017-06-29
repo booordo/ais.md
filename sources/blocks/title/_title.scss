@@ -1,10 +1,43 @@
 .title {
-	padding-bottom: 25px;
+	width: 100%;
+	padding-bottom: 50px;
 	@include media(mobile) {
 		text-align: center;
 	}
 }
 
+.title_color_white {
+	color: $white;
+}
+
+.title_color_black {
+	color: $black;
+}
+
+.title_position_center {
+	text-align: center;
+}
+
+.title__title {
+	font-size: 2.444444444444444rem;
+	line-height: 1.2em;
+	@include media(mobile) {
+		font-size: 1.705882352941176rem;		
+		line-height: 1.4em;
+	}
+}
+
 .title__subtitle {
-	
+	font-size: 1.833333333333333rem;
+	font-weight: 200;
+	@include media(mobile) {
+		font-size: 1.235294117647059rem;
+	}
+}
+
+.title__arrow {
+	margin-bottom: 7px;
+	@include media(mobile) {
+		margin-bottom: 2px;
+	}
 }

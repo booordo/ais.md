@@ -1,0 +1,27 @@
+.list {
+	
+}
+
+.list__item {
+	@include flex(row, flex-start, center, nowrap)
+	margin-bottom: 25px;
+	&:first-of-type {
+		.list__number {
+			padding: 10px 24px 15px;
+		}
+	}
+	@include media(mobile) {
+		align-items: flex-start;
+	}
+}
+
+.list__number {
+	margin-right: 30px;
+	padding: 10px 22px 15px;
+	border-radius: 100%;
+	border: 1px solid #d0d2d3;
+	color: $blue;
+	font-weight: bold;
+	font-size: 1.222222222222222rem;
+	font-family: "Catorze27Style1";
+}

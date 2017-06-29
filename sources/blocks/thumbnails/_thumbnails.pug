@@ -1,0 +1,6 @@
+mixin thumbnails(items, type)
+	.thumbnails(class= `thumbnails_type_${type}`)
+		each item in items
+			.thumbnails__item(class= `thumbnails__item_type_${type}`)
+				img.thumbnails__image(src= item.image)
+				p.thumbnails__text !{item.text}

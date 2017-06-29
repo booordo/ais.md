@@ -1,31 +1,34 @@
-//- MIXINS
-include ../blocks/container/_container
-include ../blocks/boundary/_boundary
-include ../blocks/title/_title
-include ../blocks/text/_text
-include ../blocks/image/_image
-include ../blocks/wrapper/_wrapper
+extends templates/_default
 
-//- DATA
+block page
+	
+	//- HEADER
+	include ../blocks/header/_header
+
+	//- CONTENT
+	.content
+		+container("blue", "big")
+			+wrapper("small")
+				+image(blocks[0].image, "left")
+			+wrapper("big")
+				+title("white", "", blocks[0].title, blocks[0].subtitle)
+				+image(blocks[0].image, "center", "hidden")
+				+text("white", blocks[0].text)
+		+boundary("dotted", "blue", "gray")
+		+container("gray", "normal")
+			+wrapper("big")
+				+title("black", "", blocks[1].title, blocks[1].subtitle)
+				+image(blocks[1].image, "center", "hidden")
+				+list(blocks[1].list)
+			+wrapper("small")
+				+image(blocks[1].image, "right")
+		+boundary("slash", "gray", "white")
+		+container("white", "normal", "noflex")
+			+title("black", "center", blocks[2].title)
+			+thumbnails(blocks[2].thumbnails, "simple")
+		+boundary("slash-reverse", "white", "gray")
+		+container("gray", "normal", "noflex")
 
 
-//- HEADER
-include templates/_header
-
-//- CONTENT
-.content
-	+container("blue", "image-left")
-		+wrapper
-			+image("/images/www.png")
-		+wrapper
-			+title("white", "Обмен с сайтом (интернет-магазином)", "Contabilizare <img src='images/arrow.png' style='margin-bottom:7px'/> WEB")
-			+image("/images/www.png", "hidden")
-			+text("Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est unde quas, repellat soluta, commodi perspiciatis blanditiis autem nesciunt tempore aspernatur, molestiae quisquam? Odit, nihil, inventore.", "white")
-	+boundary("dotted", "blue", "gray")
-	+container("gray", "image-right")
-	+boundary("slash", "gray", "white")
-	+container("white", "thumbnail")
-	+boundary("slash-reverse", "white", "gray")
-
-//- FOOTER
-include templates/_footer
+	//- FOOTER
+	include ../blocks/footer/_footer

@@ -1,2 +1,2 @@
-mixin text(text, color)
-	p.text(class="text__" + color)= text
+mixin text(color, text)
+	p.text(class=`text_color_${color}`) !{text}

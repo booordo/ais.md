@@ -1,13 +1,5 @@
 .container {
-	padding: 100px 15px 15px;
-}
-
-.container_color_white, .container_color_gray {
-	color: $black;
-}
-
-.container_color_blue, .container_color_black {
-	color: $white;
+	
 }
 
 .container_color_white {
@@ -26,43 +18,30 @@
 	background-color: $black;
 }
 
+.container_size_big {
+	padding: 100px 15px 15px;
+	@include media(mobile) {
+		padding: 25px 15px 25px;
+	}
+}
+
+.container_size_normal {
+	padding: 50px 15px 50px;
+	@include media(mobile) {
+		padding: 25px 15px 25px;
+	}
+}
+
+.container_size_small {
+
+}
+
 .container__inner {
 	@include flex(row);
 	max-width: 1024px;
 	margin: 0 auto;
 }
 
-.container__inner_type_image-left {
-	.wrapper {
-		@include flex(column)
-		width: 75%;
-		&:first-of-type {
-			width: 25%;
-		}
-	}
-	@include media(mobile) {
-		.wrapper {
-			width: 100%;
-			&:first-of-type {
-				display: none;
-			}
-		}
-
-		.image {
-			display: none;
-		}
-
-		.image.image_hidden {
-			display: flex;
-			justify-content: center;
-		}
-	}
-}
-
-.container__inner_type_image-right {
-
-}
-
-.container__inner_type_thumbnail {
-	
+.container__inner_type_noflex {
+	display: block;
 }

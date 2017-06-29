@@ -1,3 +1,3 @@
-mixin wrapper()
-	.wrapper
+mixin wrapper(size)
+	.wrapper(class= size ? `wrapper_${size}` : "" )
 		block
