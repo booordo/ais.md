@@ -1,6 +1,13 @@
 mixin thumbnails(items, type)
 	.thumbnails(class= `thumbnails_type_${type}`)
-		each item in items
-			.thumbnails__item(class= `thumbnails__item_type_${type}`)
-				img.thumbnails__image(src= item.image)
-				p.thumbnails__text !{item.text}
+		if type == "clouds" || type == "exchange"
+			each item in items
+				.thumbnails__item(class= `thumbnails__item_type_${type}`)
+					p.thumbnails__text(class= `thumbnails__text_type_${type}`) !{item.text}
+				if item.image
+					img.thumbnails__image(src= item.image, class= `thumbnails__image_type_${type}`)
+		else
+			each item in items
+				.thumbnails__item(class= `thumbnails__item_type_${type}`)
+					img.thumbnails__image(src= item.image, class= `thumbnails__image_type_${type}`)
+					p.thumbnails__text(class= `thumbnails__text_type_${type}`) !{item.text}
