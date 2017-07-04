@@ -4,6 +4,7 @@
 
 .wrapper_small {
 	width: 30%;
+	justify-content: center;
 	@include media(mobile) {
 		display: none;
 	}

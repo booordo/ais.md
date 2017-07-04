@@ -7,7 +7,16 @@
 	background-color: $gray;
 	background-image: url("../images/dotted_blue.png");
 	background-repeat: no-repeat;
-	background-size: cover;
+	background-size: auto auto;
+}
+
+.boundary_type_dotted-reverse.boundary_color_white-blue {
+	height: 250px;
+	background-color: $white;
+	background-image: url("../images/dotted_blue_reverse.png");
+	background-repeat: no-repeat;
+	background-position: 0 -95px;
+	background-size: auto auto;
 }
 
 .boundary_type_slash.boundary_color_gray-white {
@@ -20,6 +29,19 @@
 		height: 30px;
 		border-top: 15px solid $gray;
 		border-bottom: 15px solid $white;
+	}
+}
+
+.boundary_type_slash.boundary_color_darkblue-black {
+	height: 120px;
+	border-top: 60px solid $dark_blue;
+	border-right: calc(50vw - 17px) solid $dark_blue;
+	border-bottom: 60px solid $black;
+	border-left: calc(50vw - 17px) solid $black;
+	@include media(mobile) {
+		height: 30px;
+		border-top: 15px solid $dark_blue;
+		border-bottom: 15px solid $black;
 	}
 }
 

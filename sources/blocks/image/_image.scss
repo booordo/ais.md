@@ -1,5 +1,6 @@
 .image {
-	@include flex(row);
+	max-width: 100%;
+	height: auto;
 	@include media(mobile) {
 		display: none;
 	}
@@ -8,26 +9,21 @@
 .image_hidden {
 	display: none;
 	@include media(mobile) {
-		@include flex(row);
+		display: block;
 	}
 }
 
 .image_center {
-	justify-content: center;
+	align-self: center;
 	padding-bottom: 40px;
 }
 
 .image_left {
-	justify-content: flex-start;
+	align-self: flex-start;
 	padding-right: 30px;
 }
 
 .image_right {
-	justify-content: flex-end;
+	align-self: flex-end;
 	padding-left: 30px;
-}
-
-.image__img {
-	max-width: 100%;
-	height: auto;
 }

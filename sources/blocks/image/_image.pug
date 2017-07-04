@@ -1,13 +1,9 @@
 mixin image(url, position, type )
 	if type && position
-		.image(class= `image_${type}` + " " + `image_${position}`)
-			img.image__img(src=url)
+		img.image(src=url, class= `image_${type}` + " " + `image_${position}`)
 	else if type
-		.image(class= `image_${type}`)
-			img.image__img(src=url)
+		img.image(src=url, class= `image_${type}`)
 	else if position
-		.image(class= `image_${position}`)
-			img.image__img(src=url)
+		img.image(src=url, class= `image_${position}`)
 	else
-		.image
-			img.image__img(src=url)
+		img.image(src=url)

@@ -2,6 +2,15 @@
 	
 }
 
+.list_type_slanted {
+	color: $white;
+	.list__number {
+		color: $white;
+		border-color: $white;
+		border-width: 2px;
+	}
+}
+
 .list__item {
 	@include flex(row, flex-start, center, nowrap)
 	margin-bottom: 25px;
@@ -24,4 +33,7 @@
 	font-weight: bold;
 	font-size: 1.222222222222222rem;
 	font-family: "Catorze27Style1";
+	@include media(mobile) {
+		
+	}
 }

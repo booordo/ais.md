@@ -1,5 +1,5 @@
-mixin list(items)
-	ul.list
+mixin list(items, type)
+	ul.list(class= type ? `list_type_${type}` : '')
 		- i = 1;
 		each item in items
 			li.list__item

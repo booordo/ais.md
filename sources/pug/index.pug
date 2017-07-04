@@ -34,6 +34,15 @@ block page
 		+container("white", "normal", "noflex")
 			+title("black", "center", blocks[4].title)
 			+thumbnails(blocks[4].thumbnails, "exchange")
+		+boundary("dotted-reverse", "white", "blue")
+		+container("dark-blue", "normal" )
+			+wrapper("big")
+				+title("white", "left", blocks[5].title, blocks[5].subtitle)
+				+image(blocks[5].imageMobile, "center", "hidden")
+				+list(blocks[5].list, "slanted")
+			+wrapper("small")
+				+image(blocks[5].image, "right")
+		+boundary("slash", "darkblue", "black")
 
 	//- FOOTER
 	include ../blocks/footer/_footer
