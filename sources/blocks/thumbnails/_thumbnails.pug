@@ -6,6 +6,11 @@ mixin thumbnails(items, type)
 					p.thumbnails__text(class= `thumbnails__text_type_${type}`) !{item.text}
 				if item.image
 					img.thumbnails__image(src= item.image, class= `thumbnails__image_type_${type}`)
+		else if type == "develop"
+			each item in items
+				.thumbnails__item(class= `thumbnails__item_type_${type}`)
+					h3.thumbnails__title(class= `thumbnails__title_type_${type}`) !{item.title}
+					p.thumbnails__text(class= `thumbnails__text_type_${type}`) !{item.text}
 		else
 			each item in items
 				.thumbnails__item(class= `thumbnails__item_type_${type}`)

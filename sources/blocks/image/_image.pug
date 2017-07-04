@@ -1,4 +1,4 @@
-mixin image(url, position, type )
+mixin image(url, position, type)
 	if type && position
 		img.image(src=url, class= `image_${type}` + " " + `image_${position}`)
 	else if type

@@ -1,0 +1,54 @@
+.form {
+	width: 430px;
+	@include flex();
+	@include media(mobile) {
+		width: 100%;
+	}
+}
+
+.form__input {
+	background-color: $gray;
+	outline: none;
+	border: none;
+	height: 40px;
+	border-bottom: 1px solid #dadfe1;
+	width: 200px;
+	font-family: "FiraSans";
+	font-weight: 200;
+	font-size: 1rem;
+	margin-bottom: 30px;
+	&:nth-of-type(1) {
+		margin-right: 30px;
+		@include media(mobile) {
+			margin-right: 0;
+		}
+	}
+	@include media(mobile) {
+		width: 100%;
+	}
+}
+
+.form__submit {
+	background-color: $blue;
+	color: $white;
+	font-family: "FiraSans";
+	font-weight: bold;
+	font-size: 1.166666666666667rem;
+	padding: 15px;
+	width: 430px;
+	text-align: center;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	transition: all 0.2s;
+	&:hover {
+		background-color: $dark_blue;
+	}
+	&:focus {
+		background-color: $dark_blue;
+	}
+	@include media(mobile) {
+		width: 100%;
+	}
+}

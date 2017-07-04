@@ -37,6 +37,10 @@
 	}
 }
 
+.thumbnails_type_develop {
+	color: $white;
+}
+
 .thumbnails__item {
 	
 }
@@ -143,6 +147,25 @@
 	}
 }
 
+.thumbnails__item_type_develop {
+	margin-bottom: 15px;
+	&:nth-of-type(1) {
+		.thumbnails__title_type_develop {
+			color: $red_text;
+		}
+	}
+	&:nth-of-type(2) {
+		.thumbnails__title_type_develop {
+			color: $blue_text;
+		}
+	}
+	&:nth-of-type(3) {
+		.thumbnails__title_type_develop {
+			color: $yellow_text;
+		}
+	}
+}
+
 .thumbnails__image {
 	
 }
@@ -165,4 +188,15 @@
 
 .thumbnails__image_type_exchange {
 	display: none;
+}
+
+.thumbnails__title {
+
+}
+
+.thumbnails__title_type_develop {
+	font-family: "Roboto";
+	font-weight: bold;
+	font-size: 1.222222222222222rem;
+	margin-bottom: 15px;
 }
