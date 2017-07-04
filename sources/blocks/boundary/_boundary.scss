@@ -38,6 +38,8 @@
 		height: 30px;
 		border-top: 15px solid $gray;
 		border-bottom: 15px solid $white;
+		border-right: 50vw solid $gray;
+		border-left: 50vw solid $white;
 	}
 }
 
@@ -51,6 +53,8 @@
 		height: 30px;
 		border-top: 15px solid $dark_blue;
 		border-bottom: 15px solid $black;
+		border-right: 50vw solid $dark_blue;
+		border-left: 50vw solid $black;
 	}
 }
 
@@ -64,5 +68,7 @@
 		height: 30px;
 		border-top: 15px solid $white;
 		border-bottom: 15px solid $gray;
+		border-right: 50vw solid $gray;
+		border-left: 50vw solid $white;
 	}
 }

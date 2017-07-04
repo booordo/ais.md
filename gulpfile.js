@@ -6,14 +6,14 @@ var gulp          = require('gulp'),
     autoprefixer  = require('gulp-autoprefixer');
 
 // Static Server + watching scss/html files
-gulp.task('serve', ['sass', 'pug'], function() {
+gulp.task('serve', ['sass', 'pug', 'js'], function() {
 
     browserSync.init({
         server: "./build/"
     });
 
     gulp.watch("./sources/**/*.scss", ['sass']);
-    gulp.watch("./sources/**/*.js").on('change', browserSync.reload);
+    gulp.watch("./sources/js/*.js", ['js']);
     gulp.watch("./sources/**/*.pug", ['pug']);
 });
 
@@ -27,12 +27,17 @@ gulp.task('pug', function() {
         .pipe(browserSync.stream());
 });
 
-// Compile sass into CSS & auto-inject into browsers
 gulp.task('sass', function() {
     return gulp.src("./sources/scss/*.scss")
         .pipe(wait(1000))
         .pipe(sass())
         .pipe(gulp.dest("./build/css/"))
+        .pipe(browserSync.stream());
+});
+
+gulp.task('js', function() {
+    return gulp.src("./sources/js/*.js")
+        .pipe(gulp.dest("./build/js/"))
         .pipe(browserSync.stream());
 });
 

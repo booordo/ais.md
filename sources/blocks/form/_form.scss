@@ -48,7 +48,14 @@
 	&:focus {
 		background-color: $dark_blue;
 	}
+	&:disabled {
+		cursor: default;
+	}
 	@include media(mobile) {
 		width: 100%;
 	}
+}
+
+.g-recaptcha {
+	margin-bottom: 30px;
 }

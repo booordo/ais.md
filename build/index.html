@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <script src="https://www.google.com/recaptcha/api.js"></script>
   </head>
   <body>
     <div class="header">
@@ -181,14 +183,28 @@
               <h2 class="title__subtitle">Оставьте свой номер</h2>
               <h1 class="title__title">И мы вам перезвоним</h1>
             </div><img class="image image_hidden image_center" src="/images/block_8_image.png"/>
-            <form class="form">
-              <input class="form__input" placeholder="Ваше имя" type="text"/>
-              <input class="form__input" placeholder="Ваш телефон" type="text"/>
-              <input class="form__submit" value="Заказать звонок" type="submit"/>
+            <form class="form" onsubmit="mailTo(this)" action="javascript:void(null);">
+              <input class="form__input" placeholder="Ваше имя" type="text" name="name" required="required"/>
+              <input class="form__input" placeholder="Ваш телефон" type="text" name="phone" required="required"/>
+              <div class="g-recaptcha" data-sitekey="6Lek5icUAAAAAJwQWt8fcK1wbxzb_UqvMK7zpTLL"></div>
+              <input class="form__submit" value="Заказать звонок" type="submit" name="submit"/>
             </form>
           </div>
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer__left">
+          <div class="footer__copyright">2017 Copyright. Contabilizare. All Rights Reserved.</div>
+        </div>
+        <div class="footer__right">
+          <div class="footer__social"><span class="footer__social-text">Мы в соц.сетях:</span><a class="footer__social-link footer__social-link_facebook" href="https://www.facebook.com/contabilizare/" target="_blank"></a><a class="footer__social-link footer__social-link_youtube" href="https://www.youtube.com/channel/UC-k_ZURfduwW_waM5ACOUWA" target="_blank"></a></div>
+          <div class="footer__separator"></div>
+          <div class="footer__contacts"><a class="footer__link" href="http://www.cont.md" target="_blank">www.cont.md</a><a class="footer__link" href="http://www.clouds.md" target="_blank">www.clouds.md</a></div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

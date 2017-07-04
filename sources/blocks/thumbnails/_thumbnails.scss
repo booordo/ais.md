@@ -28,10 +28,10 @@
 	background-position: center center;
 	background-size: 778px;
 	@include media(mobile) {
-		width: 323px;
+		width: auto;
 		height: 450px;
 		margin: 0 auto;
-		background-size: 100%;
+		background-size: 323px 360px;
 		background-position: center 90px;
 		background-image: url('../images/block_5_image_mobile.png');
 	}
@@ -129,7 +129,7 @@
 		@include media(mobile) {
 			width: 100%;
 			padding-top: 0;
-			padding-left: 30px;
+			padding-left: 45px;
 			text-align: left;
 			margin-bottom: 20px;
 		}
@@ -139,7 +139,7 @@
 		padding-right: 100px;
 		@include media(mobile) {
 			width: 100%;
-			padding-right: 35px;
+			padding-right: 45px;
 			padding-bottom: 0;
 			text-align: right;
 			align-self: stretch;

@@ -1,5 +1,6 @@
 mixin form()
-	form.form
-		input.form__input(placeholder='Ваше имя' type='text')
-		input.form__input(placeholder='Ваш телефон' type='text')
-		input.form__submit(value='Заказать звонок' type='submit')
+	form.form(onsubmit='mailTo(this)' action='javascript:void(null);')
+		input.form__input(placeholder='Ваше имя' type='text' name='name' required)
+		input.form__input(placeholder='Ваш телефон' type='text' name='phone' required)
+		.g-recaptcha(data-sitekey="6Lek5icUAAAAAJwQWt8fcK1wbxzb_UqvMK7zpTLL")
+		input.form__submit(value='Заказать звонок' type='submit' name='submit')
