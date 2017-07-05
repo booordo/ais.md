@@ -1051,7 +1051,8 @@ body {
   outline: none;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  display: none; }
   .form__submit:hover {
     background-color: #128ac6; }
   .form__submit:focus {

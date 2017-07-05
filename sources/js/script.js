@@ -15,7 +15,7 @@ function mailTo (form) {
 	xhr.onreadystatechange = function() {
 		if (this.readyState != 4) return;
 		if (this.response == "ERROR") {
-			submit.value = "Пропущенна CAPTCHA!";
+			submit.value = "Что-то не так :(";
 			submit.style.backgroundColor = '#f44336';
 		} else {
 			submit.value = "Готово!";
@@ -23,7 +23,6 @@ function mailTo (form) {
 			name.style.display = 'none';
 			phone.style.display = 'none';
 		}
-		
 	}
 
 	name.style.display = 'none';
@@ -33,4 +32,14 @@ function mailTo (form) {
 	submit.style.backgroundColor = '#ff876c';
 	submit.setAttribute("disabled", true);
 
+}
+
+function captchaProcessing () {
+	var captcha = document.getElementsByClassName('g-recaptcha')[0];
+	var submit = document.getElementsByClassName('form__submit')[0];
+
+	setTimeout(function () {
+		captcha.style.display = 'none';
+		submit.style.display = 'block';
+	}, 1000)	
 }

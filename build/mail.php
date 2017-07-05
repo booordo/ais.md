@@ -10,10 +10,6 @@ if ($captcha_success["success"] == false) {
 	$name = test_input($_POST["name"]);
 	$phone = test_input($_POST["phone"]);
 
-	if (empty($name) && empty($phone)) {
-		die();	
-	}
-
 	$to = "booordo@mail.ru";
 	$subject = "Новое сообщение на сайте AIS.MD";
 	$message = "Имя: " . $name . "; Телефон: " . $phone . ";";

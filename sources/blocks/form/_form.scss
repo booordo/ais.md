@@ -42,6 +42,7 @@
 	text-transform: uppercase;
 	cursor: pointer;
 	transition: all 0.2s;
+	display: none;
 	&:hover {
 		background-color: $dark_blue;
 	}
