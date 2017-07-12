@@ -10,11 +10,12 @@ if ($captcha_success["success"] == false) {
 	$name = test_input($_POST["name"]);
 	$phone = test_input($_POST["phone"]);
 
-	$to = "booordo@mail.ru";
+	$to = "info@cont.md, zabota_06@cont.md";
 	$subject = "Новое сообщение на сайте AIS.MD";
 	$message = "Имя: " . $name . "; Телефон: " . $phone . ";";
+	$headers = "Content-type: text/html; charset=\"utf-8\"";
 
-	mail($to, $subject, $message);
+	mail($to, $subject, $message, $headers);
 
 	echo "OK";
 }
